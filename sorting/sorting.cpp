@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-void swap(int *a, int *b)  // swapping using pointers avoids copying large amt of memory
+void swap(int *a, int *b) // swapping using pointers avoids copying large amt of memory
 {
 
     int temp = *a;
@@ -23,10 +23,10 @@ void bubblesort(int arr[], int n)
 {
     bool swapped;
     int i, j;
-    for (i = 0; i < n - 1; i++)   //no of iterations
+    for (i = 0; i < n - 1; i++) // no of iterations
     {
         swapped = false;
-        for (j = 0; j < n - i - 1; j++)   // swapping adjacent in each iteration
+        for (j = 0; j < n - i - 1; j++) // swapping adjacent in each iteration
         {
             if (arr[j] > arr[j + 1])
             {
@@ -48,19 +48,20 @@ void bubbleSort(int arr[], int n)
     // Base case
     if (n == 1)
         return;
- 
+
     // One pass of bubble sort.
     for (int i=0; i<n-1; i++)
         if (arr[i] > arr[i+1])
             swap(arr[i], arr[i+1]);
- 
+
     // Largest element is fixed,
     // recur for remaining array
     bubbleSort(arr, n-1);
 }
 */
 
-void insertionsort(int arr[],int n){
+void insertionsort(int arr[], int n)
+{
     int i, key, j;
     for (i = 1; i < n; i++)
     {
@@ -73,7 +74,7 @@ void insertionsort(int arr[],int n){
         }
         arr[j + 1] = key;
     }
-    display(arr,n);
+    display(arr, n);
 }
 
 // there is also binary insertion sort
