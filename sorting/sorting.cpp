@@ -77,6 +77,24 @@ void insertionsort(int arr[], int n)
     display(arr, n);
 }
 
+void selectionSort(int arr[], int n) 
+{ 
+    int i, j, min_idx; 
+  
+    // One by one move boundary of unsorted subarray 
+    for (i = 0; i < n-1; i++) 
+    { 
+        // Finding minimum
+        min_idx = i; 
+        for (j = i+1; j < n; j++) 
+        if (arr[j] < arr[min_idx]) 
+            min_idx = j; 
+  
+        // swapping with first index
+        swap(&arr[min_idx], &arr[i]); 
+    } 
+} 
+
 // there is also binary insertion sort
 
 int main()
