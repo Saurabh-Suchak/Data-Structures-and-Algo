@@ -117,8 +117,5 @@ int main() {
     
     l1.deleteSpecificNode(7);
     l1.display();
-
-
-
     return 0;
 }
