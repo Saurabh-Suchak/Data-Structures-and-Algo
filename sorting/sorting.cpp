@@ -19,7 +19,6 @@ void display(int arr[], int n)
 }
 
 void bubblesort(int arr[], int n)
-
 {
     bool swapped;
     int i, j;
@@ -42,7 +41,7 @@ void bubblesort(int arr[], int n)
     display(arr, n);
 }
 
-/*
+/*  recursive bubble sort
 void bubbleSort(int arr[], int n)
 {
     // Base case
@@ -77,23 +76,23 @@ void insertionsort(int arr[], int n)
     display(arr, n);
 }
 
-void selectionSort(int arr[], int n) 
-{ 
-    int i, j, min_idx; 
-  
-    // One by one move boundary of unsorted subarray 
-    for (i = 0; i < n-1; i++) 
-    { 
+void selectionSort(int arr[], int n)
+{
+    int i, j, min_idx;
+
+    // One by one move boundary of unsorted subarray
+    for (i = 0; i < n - 1; i++)
+    {
         // Finding minimum
-        min_idx = i; 
-        for (j = i+1; j < n; j++) 
-        if (arr[j] < arr[min_idx]) 
-            min_idx = j; 
-  
+        min_idx = i;
+        for (j = i + 1; j < n; j++)
+            if (arr[j] < arr[min_idx])
+                min_idx = j;
+
         // swapping with first index
-        swap(&arr[min_idx], &arr[i]); 
-    } 
-} 
+        swap(&arr[min_idx], &arr[i]);
+    }
+}
 
 // there is also binary insertion sort
 
@@ -106,6 +105,11 @@ int main()
     cout << "1. display the array\n";
     cout << "2. bubble sort\n";
     cout << "3. insertion sort\n";
+    cout << "4. quick sort\n";
+    cout << "5. merge sort\n";
+    cout << "6. shell sort\n";
+    cout << "7. count sort\n";
+    cout << "9. to exit\n";
 
     cin >> choice;
     switch (choice)
@@ -119,6 +123,10 @@ int main()
     case 3:
         insertionsort(arr, n);
         break;
+    case 9:
+        cout << "you chose to exit\n";
+        break;
+
     default:
         cout << "invalid choice entered";
     }
