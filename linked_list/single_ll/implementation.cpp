@@ -8,7 +8,7 @@ class LinkedList {
     public:
         class Node {
             public:
-                int val;
+            int val;
             Node * next;
             Node(int data) {
                 val = data;
