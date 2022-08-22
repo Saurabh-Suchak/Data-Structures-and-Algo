@@ -19,8 +19,9 @@ class Solution {
             int node = q.front(); 
             q.pop(); 
             bfs.push_back(node); 
-            
+
             // traverse for all its neighbours 
+            
             for(auto it : adj[node]) {
                 // if the neighbour has previously not been visited, 
                 // store in Q and mark as visited 
