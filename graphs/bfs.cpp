@@ -21,7 +21,7 @@ class Solution {
             bfs.push_back(node); 
 
             // traverse for all its neighbours 
-            
+
             for(auto it : adj[node]) {
                 // if the neighbour has previously not been visited, 
                 // store in Q and mark as visited 
@@ -61,3 +61,8 @@ int main()
 
     return 0;
 }
+
+
+// Time Complexity: O(N) + O(2E), Where N = Nodes, 2E is for total degrees as we traverse all adjacent nodes.
+
+//Space Complexity: O(3N) ~ O(N), Space for queue data structure visited array and an adjacency list
